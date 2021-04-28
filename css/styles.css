@@ -76,6 +76,58 @@ nav.open {
   opacity: 1;
 
 }
+#about{
+  background: linear-gradient(183deg, rgba(32,143,251,1) 27%, rgba(90,183,252,1) 67%);
+  padding-bottom:  30px;
+}
+
+#atop{
+display: flex;
+flex-direction: row;
+  }
+.atopl
+{
+  flex-grow: 1;
+
+
+
+}
+.atopr
+{
+
+  flex-grow: 1;
+
+}
+#atopc
+{
+ font-family: "Poppins", sans-serif;
+ color: white;
+ font-size: 35px;
+ font-weight: 700;
+  margin-top: 50px;
+  flex-grow: 3;
+
+  text-align: center;
+  justify-content: center;
+  display:flex;
+  flex-direction: column;
+}
+
+#textabout
+{
+text-align: left;
+margin-top: 15px;
+margin-left: 140px;
+margin-right: 140px;
+font-size: 17px;
+font-weight: 300;
+
+}
+#astop
+{
+  display: flex;
+  flex-flow:row;
+}
 
 #menuToggler {
   font-size: 70px ;
@@ -85,8 +137,111 @@ nav.open {
   z-index: 1;
 }
 
+.astopc
+{
+  display: flex;
+  margin-top: 40px;
+flex-grow: 3;
+flex-flow: column;
+
+}
+
+.int{
+
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
 
 
+.passions{
+  background-color: white;
+color: #434E5E;
+  text-align: center;
+font-family: "Poppins", sans-serif;
+font-weight: 600;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  height: 150px;
+  border-width: 3px;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: rgb(239, 241, 240);
+    max-width: 190px;
+    min-width:180px;
+
+}
+
+#skills{
+  background-color: #F7F8FA;
+padding-bottom: 70px;
+}
+#skillstop
+{
+
+display: flex;
+flex-flow: row;
+}
+.skillss{
+  flex-grow: 1;
+}
+#skillsc
+{
+  color: #434E5E;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  margin-top: 40px;
+  text-align: center;
+  flex-grow: 3;
+}
+
+#skillstops
+{
+  flex-flow: row;
+  display:flex;
+  justify-content:space-around;
+
+}
+.sidesskills
+{
+
+
+  flex-grow: 1;
+}
+.skillsx
+{
+display: flex;
+  background-color: white;
+  margin-top: 70px;
+  text-align: center;
+justify-content: center;
+  height: 300px;
+min-width: 300px;
+margin-left: 15px;
+margin-right: 15px;
+
+flex-grow: 1;
+border-radius: 0px;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(239, 241, 240);
+box-shadow:  2px 2px 4px #AAAAAA;
+
+}
+.circles
+{
+ transform: translate(0px, -50px);
+  text-align: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+
+  background-color: rgba(32,143,251);
+}
 /* TABLET STYLES */
 
 @media screen and (min-width: 730px) {
@@ -264,6 +419,9 @@ flex-direction: row;
     {
       height: 450px;
     }
+
+
+
     @media screen and (max-width: 730px) {
 
       /* applies to screens wider than 999px */
