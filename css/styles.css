@@ -2,12 +2,27 @@
 
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
+html {
+    scroll-behavior: smooth;
+
+  }
+
 @font-face
 
 {
 font-family: "Poppins";
 src:url(Poppins-Black.ttf);
+
 }
+
+@font-face
+
+{
+  font-family: "Roboto";
+  src:url(Roboto-Regular.ttf);
+
+}
+
 
 body {
 
@@ -61,21 +76,43 @@ padding-top: 0px;
 {
   margin-right: 30px;
 }
+a {
+  text-decoration: none;
+text-shadow: 2px 2px 4px black;
+  color: white;
 
+
+}
 nav {
-
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+background: linear-gradient(183deg, rgba(32,143,251,1) 27%, rgba(90,183,252,1) 67%);
+border-right-style: solid;
+border-color: #1575CB;
   display: flex;
   flex-direction: column;
   position: fixed;
   opacity: 0;
-  transition: 0.5s;
-  transform: translateX(100vw);
+  transform: translateY(-250px);
+  left: 0px;
+padding-left: 15px;
+  width: 200px;
+  height: 200px;
+  padding-top: 30px;
+  border-radius: 0 0 0px 0px;
+transition: 0.5s;
 }
 nav.open {
-  transform: translateX(0);
+  transition: 0.5s;
+
+  transform: translateY(0);
   opacity: 1;
 
+  border-radius: 0 0 100% 0px;
 }
+
 #about{
   background: linear-gradient(183deg, rgba(32,143,251,1) 27%, rgba(90,183,252,1) 67%);
   padding-bottom:  30px;
@@ -119,8 +156,10 @@ text-align: left;
 margin-top: 15px;
 margin-left: 140px;
 margin-right: 140px;
+
+font-family: "Roboto", sans-serif;
 font-size: 17px;
-font-weight: 300;
+font-weight: 400;
 
 }
 #astop
@@ -130,11 +169,16 @@ font-weight: 300;
 }
 
 #menuToggler {
-  font-size: 70px ;
+text-shadow: 2px 2px 4px #AAAAAA;
+  font-size: 100px ;
+  color: white;
+  cursor: pointer;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
+  display: flex;
+  margin-right: 20px;
 }
 
 .astopc
@@ -202,6 +246,7 @@ flex-flow: row;
 #skillstops
 {
   flex-flow: row;
+
   display:flex;
   justify-content:space-around;
 
@@ -214,7 +259,8 @@ flex-flow: row;
 }
 .skillsx
 {
-display: flex;
+display:block;
+
   background-color: white;
   margin-top: 70px;
   text-align: center;
@@ -240,7 +286,34 @@ box-shadow:  2px 2px 4px #AAAAAA;
   height: 90px;
   border-radius: 50%;
 
+
   background-color: rgba(32,143,251);
+}
+.skillsblock
+{
+
+  justify-content: center;
+  display: flex;
+  margin-bottom: -30px;
+}
+.skillx
+{
+
+  color: #434E5E;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.tick
+{
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 17px;
+  color: #636E7E;
+  font-family: "Poppins", sans-serif;
+  margin-left: 15%;
+  text-align: left;
 }
 /* TABLET STYLES */
 
@@ -253,6 +326,7 @@ box-shadow:  2px 2px 4px #AAAAAA;
   }
 
 a {
+  text-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -315,15 +389,20 @@ transform: rotate(360deg);
 
   nav {
 
-padding-left: 11%;
-padding-right: 11%;
-
+padding-left: 7%;
+padding-right: 7%;
+background: none;
     display: flex;
     flex-direction: row;
     position: static;
     opacity: 1;
     transform: translateX(0);
-
+    width:auto;
+    height: auto;
+    border-radius: 0 0 0 0;
+    transition: all 0.3s;
+    padding-top: 0px;
+    border-right-style: none;
   }
 
 }
@@ -363,17 +442,19 @@ flex-direction: row;
 }
 
 #homertekst{
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 17px;
-  font-weight: 300;
+  font-weight: 400;
+
   color: white;
   word-wrap: break-word;
 
 }
 #name
 {
-  font-size: 50px;
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-size: 44px;
+  font-weight: 100;
 }
 
 #btn {
@@ -419,12 +500,16 @@ flex-direction: row;
     {
       height: 450px;
     }
-
+  .skillsx
+  {
+    min-width: 200px;
+  }
 
 
     @media screen and (max-width: 730px) {
 
       /* applies to screens wider than 999px */
+
 
       body {
         background: #ccf;
@@ -444,5 +529,38 @@ flex-direction: row;
       #home
       {
         height: 700px;
+      }
+      #skillstops
+      {
+        flex-direction: column;
+      }
+      .skillsx
+      {
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+      #textabout{
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      #sign{
+        display: flex;
+        justify-content: flex-end;
+      }
+      #cright
+      {
+        max-width: 0px;
+      }
+      .icon{
+        z-index: 5;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .icon:hover:not(.active) {
+      transition: all 0.3s;
+      border-bottom:  solid 0px #019fb6;
+      transform: rotate(360deg);
       }
 }
